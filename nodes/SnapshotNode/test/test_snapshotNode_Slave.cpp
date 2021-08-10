@@ -61,7 +61,7 @@ TEST(SnapshotNode, TestMaster) {
         usleep(2.0 * 1000000.0);
 
         eros::srv_filetransfer req;
-        req.request.path = "~/test/storage/SNAPSHOT/DEVICESNAPSHOT/";
+        req.request.path = "~/storage/SNAPSHOT/DEVICESNAPSHOT/";
         req.response.files.clear();
         EXPECT_EQ(client.call(req), true);
         EXPECT_TRUE(req.response.files.size() == 0);
